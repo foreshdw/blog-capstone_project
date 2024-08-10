@@ -1,0 +1,22 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container px-4 py-2 my-4">
+    <h1 class="display-6 fw-bold">
+        <%= title %>
+    </h1>
+    <p class="lead mb-4 fw-normal">
+        <%= paragraph %>
+    </p>
+    <input class="outline-button" type="submit" value="Edit" onclick="editPost()">
+    <input class="delete-button" type="submit" value="Delete" onclick="window.location.href='/post'">
+</div>
+
+<script>
+    function editPost() {
+        const title = encodeURIComponent('<%= title %>');
+        const paragraph = encodeURIComponent('<%= paragraph %>');
+        window.location.href = `/edit?title=${title}&paragraph=${paragraph}`;
+    }
+</script>
+
+<%- include("partials/footer.ejs") %>

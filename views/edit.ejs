@@ -1,0 +1,14 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container px-4 py-2 my-5">
+    <form action="/view" method="POST">
+        <label for="paragraph"><h5>Edit your Blog</h5></label>
+        <textarea class="small-input" id="paragraph" name="title"><%= title %></textarea>
+        <textarea class="large-input" id="paragraph" name="paragraph" placeholder="Let your thoughts flow... Craft your post here."><%= paragraph %></textarea>
+        
+        <input class="fill-button" type="submit" value="Save">
+        <input class="outline-button" type="submit" value="Cancel" onclick="window.location.href='/view'">
+    </form>
+</div>
+
+<%- include("partials/footer.ejs") %>

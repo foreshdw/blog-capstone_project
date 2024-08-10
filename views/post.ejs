@@ -1,0 +1,13 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container px-4 py-2 my-5">
+    <form action="/view" method="POST">
+        <label for="paragraph"><h5>Write your Blog</h5></label>
+        <textarea class="small-input" id="paragraph" name="title" placeholder="Write your title..." required></textarea>
+        <textarea class="large-input" id="paragraph" name="paragraph" placeholder="Let your thoughts flow... Craft your post here." required></textarea>
+        
+        <input class="fill-button" type="submit" value="Post">
+    </form>
+</div>
+
+<%- include("partials/footer.ejs") %>
